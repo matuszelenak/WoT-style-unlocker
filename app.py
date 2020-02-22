@@ -11,7 +11,6 @@ from flask_bootstrap import Bootstrap
 
 
 BASE_DIR = os.path.dirname(__file__)
-VEHICLE_SCRIPT_PATH = ['res', 'scripts', 'item_defs', 'vehicles']
 
 
 class TankStylesApp(Flask):
@@ -21,13 +20,9 @@ class TankStylesApp(Flask):
         super().__init__(*args, **kwargs)
 
     def load_vehicle_scripts(self):
-        for root_dir, _, files in os.walk(os.path.join(BASE_DIR, 'source', *VEHICLE_SCRIPT_PATH), topdown=False):
+        for root_dir, _, files in os.walk(os.path.join(BASE_DIR, 'source', 'res', 'scripts', 'item_defs', 'vehicles'), topdown=False):
             split_path = root_dir.split(os.sep)
-            if split_path[-3:-1] != ['item_defs', 'vehicles']:
-                continue
             for file_name in files:
-                if file_name in ['customization.xml', 'list.xml']:
-                    continue
                 with open(os.path.join(root_dir, file_name)) as f:
                     lines = f.readlines()
                     xml = ''.join(lines[:1] + lines[2:])
@@ -55,9 +50,6 @@ class TankStylesApp(Flask):
                     'styles': list(styles_set),
                     'display_name': ' '.join(name.replace('_', ' ').split()[1:])
                 })
-
-        for vehicle in self.vehicles.values():
-            print(vehicle['name'], vehicle['script_paths'], vehicle['styles'])
 
     def get_styled_xml(self, name, style_name):
         vehicle = self.vehicles[name]
