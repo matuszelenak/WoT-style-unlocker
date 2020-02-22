@@ -15,7 +15,7 @@
                     </div>
                     <div class="col-md-5">
                         <label for="{{ vehicle.name }}_style">Style</label>
-                        <select id="{{ vehicle.name }}_style" name="style_{{ vehicle.name }}" {% if vehicle.styles|length == 1 %} disabled="disabled"{% endif %}>
+                        <select id="{{ vehicle.name }}_style" name="style_{{ vehicle.name }}">
                             {% for style in vehicle.styles %}
                                 <option value="{{ style }}">{{ style }}</option>
                             {% endfor %}

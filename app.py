@@ -47,8 +47,6 @@ class TankStylesApp(Flask):
                 if not styles_set:
                     continue
 
-                print(name)
-
                 self.vehicles[name]['script_paths'].append(os.path.join(*split_path[-5:], file_name))
                 self.vehicles[name].update({
                     'name': name,
@@ -58,10 +56,13 @@ class TankStylesApp(Flask):
                     'display_name': ' '.join(name.replace('_', ' ').split()[1:])
                 })
 
+        for vehicle in self.vehicles.values():
+            print(vehicle['name'], vehicle['script_paths'], vehicle['styles'])
+
     def get_styled_xml(self, name, style_name):
         vehicle = self.vehicles[name]
         if style_name not in vehicle['styles']:
-            return vehicle['script']
+            return [], vehicle['xml']
 
         root = ET.fromstring(vehicle['xml'])
         model_states = ['undamaged', 'destroyed', 'exploded']
