@@ -1,0 +1,33 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}World of Tanks styles{% endblock %}
+
+{% block content %}
+    <div class="container" style="padding: 50px">
+        <form method="post">
+            {% for vehicle in vehicles %}
+                <div class="row">
+                    <div class="col-md-3">
+                        <input id="{{ vehicle.name }}" name="include_{{ vehicle.name }}" type="checkbox" checked="checked">
+                        <label for="{{ vehicle.name }}">Include</label>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>{{ vehicle.display_name }}</h4>
+                    </div>
+                    <div class="col-md-5">
+                        <label for="{{ vehicle.name }}_style">Style</label>
+                        <select id="{{ vehicle.name }}_style" name="style_{{ vehicle.name }}" {% if vehicle.styles|length == 1 %} disabled="disabled"{% endif %}>
+                            {% for style in vehicle.styles %}
+                                <option value="{{ style }}">{{ style }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-lg btn-success">Create a modpack</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
