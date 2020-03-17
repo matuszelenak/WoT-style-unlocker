@@ -8,7 +8,6 @@ from io import BytesIO
 from typing import List, Tuple
 
 from flask import Flask, render_template, request, send_file
-from flask_bootstrap import Bootstrap
 
 
 BASE_DIR = os.path.dirname(__file__)
@@ -111,7 +110,6 @@ class TankStylesApp(Flask):
 
 
 app = TankStylesApp(__name__)
-Bootstrap(app)
 
 
 def create_zip_file(files: List[Tuple[List[str], str]]):
