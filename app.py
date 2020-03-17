@@ -1,3 +1,4 @@
+import json
 import os
 import copy
 import xml.etree.ElementTree as ET
@@ -14,6 +15,14 @@ BASE_DIR = os.path.dirname(__file__)
 
 
 class TankStylesApp(Flask):
+    customizable_areas = {
+        'GUN': 'Gun',
+        'GUN GUN_2': 'Gun',
+        'CHASSIS': 'Chassis',
+        'TURRET': 'Turret',
+        'HULL': 'Hull'
+    }
+
     def __init__(self, *args, **kwargs):
         self.vehicles = defaultdict(lambda: {'script_paths': []})
         self.load_vehicle_scripts()
@@ -40,7 +49,18 @@ class TankStylesApp(Flask):
                         styles_set.add(style.tag)
 
                 if not styles_set:
+                    os.remove(os.path.join(root_dir, file_name))
                     continue
+
+                camo, paint = set(), set()
+                for areas in root.iter(tag='customizableVehicleAreas'):
+                    camo_areas = areas.find('camouflage')
+                    if camo_areas is not None and camo_areas.text:
+                        camo.add(self.customizable_areas[camo_areas.text.strip()])
+
+                    paint_areas = areas.find('paint')
+                    if paint_areas is not None and paint_areas.text:
+                        paint.add(self.customizable_areas[paint_areas.text.strip()])
 
                 self.vehicles[name]['script_paths'].append(os.path.join(*split_path[-5:], file_name))
                 self.vehicles[name].update({
@@ -48,10 +68,12 @@ class TankStylesApp(Flask):
                     'xml': xml,
                     'nation': split_path[-1],
                     'styles': list(styles_set),
-                    'display_name': ' '.join(name.replace('_', ' ').split()[1:])
+                    'display_name': ' '.join(name.replace('_', ' ').split()[1:]),
+                    'paint_areas': list(paint),
+                    'camo_areas': list(camo)
                 })
 
-    def get_styled_xml(self, name, style_name):
+    def get_styled_xml(self, name, style_name, camos, paints):
         vehicle = self.vehicles[name]
         if style_name not in vehicle['styles']:
             return [], vehicle['xml']
@@ -71,6 +93,19 @@ class TankStylesApp(Flask):
 
             for pos, state in enumerate(model_states):
                 model_tag.insert(pos, copy.deepcopy(style.find(state)))
+
+        for areas in root.iter(tag='customizableVehicleAreas'):
+            camo_areas = areas.find('camouflage')
+            if camo_areas is not None and camo_areas.text:
+                key = self.customizable_areas[camo_areas.text.strip()]
+                if key not in camos:
+                    camo_areas.text = ''
+
+            paint_areas = areas.find('paint')
+            if paint_areas is not None and paint_areas.text:
+                key = self.customizable_areas[paint_areas.text.strip()]
+                if key not in paints:
+                    paint_areas.text = ''
 
         return vehicle['script_paths'], ET.tostring(root).decode()
 
@@ -92,7 +127,15 @@ def create_zip_file(files: List[Tuple[List[str], str]]):
 
 def get_styled_files(form_data):
     included_vehicle_names = [key[len('include_'):] for key, value in form_data.items() if value == 'on']
-    return [app.get_styled_xml(vehicle_name, form_data.get('style_' + vehicle_name)) for vehicle_name in included_vehicle_names]
+    return [
+        app.get_styled_xml(
+            vehicle_name,
+            form_data.get('style_' + vehicle_name),
+            form_data.getlist('camo_' + vehicle_name) or [],
+            form_data.getlist('paint_' + vehicle_name) or []
+        )
+        for vehicle_name in included_vehicle_names
+    ]
 
 
 @app.route('/', methods=['GET', 'POST'])
