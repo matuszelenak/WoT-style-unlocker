@@ -1,0 +1,161 @@
+{
+    "R19_IS-3": {
+        "Defender_Day": "Pike",
+        "R19_IS-3_3Dst": "Montu"
+    },
+    "R97_Object_140": {
+        "R97_Object_140_3Dst": "Sekhmet"
+    },
+    "R160_T_50_2": {
+        "SD": "Immortal classic"
+    },
+    "R40_T-54": {
+        "halloween": "Revenant"
+    },
+    "R148_Object_430_U": {
+        "R148_Object_430_U_3Dst": "Kelevra"
+    },
+    "R77_KV2": {
+        "R77_KV2_Postap_3Dst": "Crimson Legion"
+    },
+    "R159_SU_130PM": {
+        "SnowLeopard": "Snow Leopard",
+        "R159_SU_130PM_3Dst_10_additional_FULL3D": "Altai Fox"
+    },
+    "R152_KV2_W": {
+        "WH": "Ragnarok"
+    },
+    "R52_Object_261": {
+        "R52_Object_261_3Dst": "The Thin Case"
+    },
+    "R45_IS-7": {
+        "NYst": "Granite"
+    },
+    "R127_T44_100_P": {
+        "FULL3D": "Rostelecom"
+    },
+    "R95_Object_907": {
+        "Burnout": "Burnout",
+        "R95_Object_907_stock_3Dst": "Graphite"
+    },
+    "R155_Object_277": {
+        "R155_Object_277_3Dst": "Fluffy"
+    },
+    "R132_VNII_100LT": {
+        "R132_VNII_100LT_3Dst": "Gyurza"
+    },
+    "R154_T_34E_1943": {
+        "KurskBattle": "Kursk Battle"
+    },
+    "Cz13_T_27": {
+        "T_27_3Dst": "Ján Žižka"
+    },
+    "It08_Progetto_M40_mod_65": {
+        "It08_Progetto_M40_mod_65_3Dst": "Aquilifer"
+    },
+    "It13_Progetto_M35_mod_46": {
+        "FULL3D": "Safari Corazzato"
+    },
+    "S26_Lansen_C": {
+        "WolvesOfOdin": "Wolves of Odin"
+    },
+    "S16_Kranvagn": {
+        "S16_Kranvagn_3Dst_10_additional_FULL3D": "Hjälpkran"
+    },
+    "S29_UDES_14_5": {
+        "UDES_14_5_3Dst": "Ski Patrol"
+    },
+    "A66_M103": {
+        "Helloween_3Dst": "Revenant"
+    },
+    "A83_T110E4": {
+        "NY_3Dst": "Major Ram"
+    },
+    "A126_PzVI_Tiger_II_capt": {
+        "KingTiger": "King Tiger"
+    },
+    "A67_T57_58": {
+        "NYst": "Hellhound"
+    },
+    "A123_T78": {
+        "T78_ID": "Stars and Stripes"
+    },
+    "A124_T54E2": {
+        "A124_T54E2_Renegade_3Dst": "Dead or alive"
+    },
+    "A100_T49": {
+        "halloween": "Revenant"
+    },
+    "A127_TL_1_LPC": {
+        "offspring": "Pretty fly"
+    },
+    "F05_BDR_G1B": {
+        "WH": "Mordian"
+    },
+    "F10_AMX_50B": {
+        "FULL3D": "Javan Rhino"
+    },
+    "F112_M10_RBFM": {
+        "Siroco": "Siroco"
+    },
+    "F18_Bat_Chatillon25t": {
+        "NYst": "Marengo"
+    },
+    "F88_AMX_13_105": {
+        "F88_AMX_13_105_3Dst": "Viper Noir"
+    },
+    "F17_AMX_13_90": {
+        "Halloween_3Dst": "Revenant"
+    },
+    "F116_Bat_Chatillon_Bourrasque": {
+        "F116_Bat_Chatillon_Bourrasque_3Dst": "1998 ZZ 10"
+    },
+    "G73_E50_Ausf_M": {
+        "Halloween_3Dst": "Specter"
+    },
+    "G51_Lowe": {
+        "Valentine_Day": "Anhalt Lion"
+    },
+    "G143_E75_TS": {
+        "TS_3Dst": "Becken Kampfgruppa"
+    },
+    "G72_JagdPz_E100": {
+        "G72_JagdPz_E100_3Dst": "Panzerschiff"
+    },
+    "G121_Grille_15_L63": {
+        "NYst": "Igelschnäuzchen"
+    },
+    "G56_E-100": {
+        "G56_E-100_3Dst": "Klarer Himmel"
+    },
+    "G54_E-50": {
+        "Halloween_3Dst": "Specter"
+    },
+    "G64_Panther_II": {
+        "Halloween_3Dst": "Specter"
+    },
+    "G112_KanonenJagdPanzer_105": {
+        "KanonenPanter": "Black Panther"
+    },
+    "Pl08_50TP_prototyp": {
+        "WingedHussar": "Winged Hussar"
+    },
+    "GB70_N_FV4202_105": {
+        "GB70_FV4202_PatDay_3Dst": "Four-leaf clover"
+    },
+    "GB83_FV4005": {
+        "GB83_FV4005_3Dst": "Galahad"
+    },
+    "GB24_Centurion_Mk3": {
+        "halloween": "Revenant"
+    },
+    "GB91_Super_Conqueror": {
+        "GB91_Super_Conqueror_3Dst": "Sentry"
+    },
+    "GB105_Black_Prince_2019": {
+        "GB105_Black_Prince_2019_3Dst": "Hobart’s Funnies"
+    },
+    "GB93_Caernarvon_AX": {
+        "RoyalCorps": "Royal Corps"
+    }
+}

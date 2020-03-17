@@ -9,7 +9,6 @@ from typing import List, Tuple
 
 from flask import Flask, render_template, request, send_file
 
-
 BASE_DIR = os.path.dirname(__file__)
 
 
@@ -28,6 +27,9 @@ class TankStylesApp(Flask):
         super().__init__(*args, **kwargs)
 
     def load_vehicle_scripts(self):
+        with open('source/display_names.json') as f:
+            display_names = json.load(f)
+
         for root_dir, _, files in os.walk(os.path.join(BASE_DIR, 'source', 'res', 'scripts', 'item_defs', 'vehicles'), topdown=False):
             split_path = root_dir.split(os.sep)
             for file_name in files:
@@ -45,7 +47,7 @@ class TankStylesApp(Flask):
                         continue
 
                     for style in list(model_styles):
-                        styles_set.add(style.tag)
+                        styles_set.add((style.tag, display_names[name].get(style.tag, style.tag)))
 
                 if not styles_set:
                     os.remove(os.path.join(root_dir, file_name))
@@ -74,7 +76,7 @@ class TankStylesApp(Flask):
 
     def get_styled_xml(self, name, style_name, camos, paints):
         vehicle = self.vehicles[name]
-        if style_name not in vehicle['styles']:
+        if style_name not in [codename for codename, name in vehicle['styles']]:
             return [], vehicle['xml']
 
         root = ET.fromstring(vehicle['xml'])
@@ -140,7 +142,8 @@ def get_styled_files(form_data):
 def styles():
     if request.method == 'POST':
         files = get_styled_files(request.form)
-        return create_zip_file(files)
+        if files:
+            return create_zip_file(files)
 
     sorted_vehicles = sorted(app.vehicles.values(), key=lambda vehicle: (vehicle['nation'], vehicle['name']))
     return render_template('styles.html', vehicles=sorted_vehicles)
