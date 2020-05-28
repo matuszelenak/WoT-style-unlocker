@@ -1,161 +1,317 @@
 {
     "R19_IS-3": {
-        "Defender_Day": "Pike",
-        "R19_IS-3_3Dst": "Montu"
+        "name": "IS-3",
+        "styles": {
+            "Defender_Day": "Pike",
+            "R19_IS-3_3Dst": "Montu"
+        }
     },
     "R97_Object_140": {
-        "R97_Object_140_3Dst": "Sekhmet"
+        "name": "Object 140",
+        "styles": {
+            "R97_Object_140_3Dst": "Sekhmet"
+        }
     },
     "R160_T_50_2": {
-        "SD": "Immortal classic"
+        "name": "T-50-2",
+        "styles": {
+            "SD": "Immortal classic"
+        }
     },
     "R40_T-54": {
-        "halloween": "Revenant"
+        "name": "T-54",
+        "styles": {
+            "halloween": "Revenant"
+        }
     },
     "R148_Object_430_U": {
-        "R148_Object_430_U_3Dst": "Kelevra"
+        "name": "Object 430U",
+        "styles": {
+            "R148_Object_430_U_3Dst": "Kelevra"
+        }
     },
     "R77_KV2": {
-        "R77_KV2_Postap_3Dst": "Crimson Legion"
+        "name": "KV-2",
+        "styles": {
+            "R77_KV2_Postap_3Dst": "Crimson Legion"
+        }
     },
     "R159_SU_130PM": {
-        "SnowLeopard": "Snow Leopard",
-        "R159_SU_130PM_3Dst_10_additional_FULL3D": "Altai Fox"
+        "name": "SU-130PM",
+        "styles": {
+            "SnowLeopard": "Snow Leopard",
+            "R159_SU_130PM_3Dst_10_additional_FULL3D": "Altai Fox"
+        }
     },
     "R152_KV2_W": {
-        "WH": "Ragnarok"
+        "name": "KV-2 (R)",
+        "styles": {
+            "WH": "Ragnarok"
+        }
     },
     "R52_Object_261": {
-        "R52_Object_261_3Dst": "The Thin Case"
+        "name": "Object 261",
+        "styles": {
+            "R52_Object_261_3Dst": "The Thin Case"
+        }
     },
     "R45_IS-7": {
-        "NYst": "Granite"
+        "name": "IS-7",
+        "styles": {
+            "NYst": "Granite"
+        }
     },
     "R127_T44_100_P": {
-        "FULL3D": "Rostelecom"
+        "name": "T-44-100 (R)",
+        "styles": {
+            "FULL3D": "Rostelecom"
+        }
     },
     "R95_Object_907": {
-        "Burnout": "Burnout",
-        "R95_Object_907_stock_3Dst": "Graphite"
+        "name": "Object 907",
+        "styles": {
+            "Burnout": "Burnout",
+            "R95_Object_907_stock_3Dst": "Graphite"
+        }
     },
     "R155_Object_277": {
-        "R155_Object_277_3Dst": "Fluffy"
+        "name": "Object 277",
+        "styles": {
+            "R155_Object_277_3Dst": "Fluffy"
+        }
     },
     "R132_VNII_100LT": {
-        "R132_VNII_100LT_3Dst": "Gyurza"
+        "name": "T-100LT",
+        "styles": {
+            "R132_VNII_100LT_3Dst": "Gyurza"
+        }
     },
     "R154_T_34E_1943": {
-        "KurskBattle": "Kursk Battle"
+        "name": "T-34 shielded",
+        "styles": {
+            "KurskBattle": "Kursk Battle"
+        }
     },
     "Cz13_T_27": {
-        "T_27_3Dst": "Ján Žižka"
+        "name": "Škoda T 27",
+        "styles": {
+            "T_27_3Dst": "J\u00e1n \u017di\u017eka"
+        }
     },
     "It08_Progetto_M40_mod_65": {
-        "It08_Progetto_M40_mod_65_3Dst": "Aquilifer"
+        "name": "Progetto M40 mod. 65",
+        "styles": {
+            "It08_Progetto_M40_mod_65_3Dst": "Aquilifer"
+        }
     },
     "It13_Progetto_M35_mod_46": {
-        "FULL3D": "Safari Corazzato"
+        "name": "Progetto M35 mod. 46",
+        "styles": {
+            "FULL3D": "Safari Corazzato"
+        }
     },
     "S26_Lansen_C": {
-        "WolvesOfOdin": "Wolves of Odin"
+        "name": "Lansen C",
+        "styles": {
+            "WolvesOfOdin": "Wolves of Odin"
+        }
     },
     "S16_Kranvagn": {
-        "S16_Kranvagn_3Dst_10_additional_FULL3D": "Hjälpkran"
+        "name": "Kranvagn",
+        "styles": {
+            "S16_Kranvagn_3Dst_10_additional_FULL3D": "Hj\u00e4lpkran"
+        }
     },
     "S29_UDES_14_5": {
-        "UDES_14_5_3Dst": "Ski Patrol"
+        "name": "UDES 14 Alt 5",
+        "styles": {
+            "UDES_14_5_3Dst": "Ski Patrol"
+        }
     },
     "A66_M103": {
-        "Helloween_3Dst": "Revenant"
+        "name": "M103",
+        "styles": {
+            "Helloween_3Dst": "Revenant"
+        }
     },
     "A83_T110E4": {
-        "NY_3Dst": "Major Ram"
+        "name": "T110E4",
+        "styles": {
+            "NY_3Dst": "Major Ram"
+        }
     },
     "A126_PzVI_Tiger_II_capt": {
-        "KingTiger": "King Tiger"
+        "name": "King Tiger (Captured)",
+        "styles": {
+            "KingTiger": "King Tiger"
+        }
     },
     "A67_T57_58": {
-        "NYst": "Hellhound"
+        "name": "T57 Heavy",
+        "styles": {
+            "NYst": "Hellhound"
+        }
     },
     "A123_T78": {
-        "T78_ID": "Stars and Stripes"
+        "name": "T78",
+        "styles": {
+            "T78_ID": "Stars and Stripes"
+        }
     },
     "A124_T54E2": {
-        "A124_T54E2_Renegade_3Dst": "Dead or alive"
+        "name": "M54 Renegade",
+        "styles": {
+            "A124_T54E2_Renegade_3Dst": "Dead or alive"
+        }
     },
     "A100_T49": {
-        "halloween": "Revenant"
+        "name": "T49",
+        "styles": {
+            "halloween": "Revenant"
+        }
     },
     "A127_TL_1_LPC": {
-        "offspring": "Pretty fly"
+        "name": "TL-1 LPC",
+        "styles": {
+            "offspring": "Pretty fly"
+        }
     },
     "F05_BDR_G1B": {
-        "WH": "Mordian"
+        "name": "BDR G1 B",
+        "styles": {
+            "WH": "Mordian"
+        }
     },
     "F10_AMX_50B": {
-        "FULL3D": "Javan Rhino"
+        "name": "AMX 50B",
+        "styles": {
+            "FULL3D": "Javan Rhino"
+        }
     },
     "F112_M10_RBFM": {
-        "Siroco": "Siroco"
+        "name": "M10 RBFM",
+        "styles": {
+            "Siroco": "Siroco"
+        }
     },
     "F18_Bat_Chatillon25t": {
-        "NYst": "Marengo"
+        "name": "Bat.-Châtillon 25 t",
+        "styles": {
+            "NYst": "Marengo"
+        }
     },
     "F88_AMX_13_105": {
-        "F88_AMX_13_105_3Dst": "Viper Noir"
+        "name": "AMX 13 105",
+        "styles": {
+            "F88_AMX_13_105_3Dst": "Viper Noir"
+        }
     },
     "F17_AMX_13_90": {
-        "Halloween_3Dst": "Revenant"
+        "name": "AMX 13 90",
+        "styles": {
+            "Halloween_3Dst": "Revenant"
+        }
     },
     "F116_Bat_Chatillon_Bourrasque": {
-        "F116_Bat_Chatillon_Bourrasque_3Dst": "1998 ZZ 10"
+        "name": "Bat.-Châtillon Bourrasque",
+        "styles": {
+            "F116_Bat_Chatillon_Bourrasque_3Dst": "1998 ZZ 10"
+        }
     },
     "G73_E50_Ausf_M": {
-        "Halloween_3Dst": "Specter"
+        "name": "E50 Ausf. M",
+        "styles": {
+            "Halloween_3Dst": "Specter"
+        }
     },
     "G51_Lowe": {
-        "Valentine_Day": "Anhalt Lion"
+        "name": "Löwe",
+        "styles": {
+            "Valentine_Day": "Anhalt Lion"
+        }
     },
     "G143_E75_TS": {
-        "TS_3Dst": "Becken Kampfgruppa"
+        "name": "E75 TS",
+        "styles": {
+            "TS_3Dst": "Becken Kampfgruppa"
+        }
     },
     "G72_JagdPz_E100": {
-        "G72_JagdPz_E100_3Dst": "Panzerschiff"
+        "name": "Jagdpanzer E 100",
+        "styles": {
+            "G72_JagdPz_E100_3Dst": "Panzerschiff"
+        }
     },
     "G121_Grille_15_L63": {
-        "NYst": "Igelschnäuzchen"
+        "name": "Grille 15",
+        "styles": {
+            "NYst": "Igelschn\u00e4uzchen"
+        }
     },
     "G56_E-100": {
-        "G56_E-100_3Dst": "Klarer Himmel"
+        "name": "E 100",
+        "styles": {
+            "G56_E-100_3Dst": "Klarer Himmel"
+        }
     },
     "G54_E-50": {
-        "Halloween_3Dst": "Specter"
+        "name": "E 50",
+        "styles": {
+            "Halloween_3Dst": "Specter"
+        }
     },
     "G64_Panther_II": {
-        "Halloween_3Dst": "Specter"
+        "name": "Panther II",
+        "styles": {
+            "Halloween_3Dst": "Specter"
+        }
     },
     "G112_KanonenJagdPanzer_105": {
-        "KanonenPanter": "Black Panther"
+        "name": "KanonenJagdPanzer 105",
+        "styles": {
+            "KanonenPanter": "Black Panther"
+        }
     },
     "Pl08_50TP_prototyp": {
-        "WingedHussar": "Winged Hussar"
+        "name": "50TP prototyp",
+        "styles": {
+            "WingedHussar": "Winged Hussar"
+        }
     },
     "GB70_N_FV4202_105": {
-        "GB70_FV4202_PatDay_3Dst": "Four-leaf clover"
+        "name": "FV4202",
+        "styles": {
+            "GB70_FV4202_PatDay_3Dst": "Four-leaf clover"
+        }
     },
     "GB83_FV4005": {
-        "GB83_FV4005_3Dst": "Galahad"
+        "name": "FV4005",
+        "styles": {
+            "GB83_FV4005_3Dst": "Galahad"
+        }
     },
     "GB24_Centurion_Mk3": {
-        "halloween": "Revenant"
+        "name": "Centurion Mk. 7/1",
+        "styles": {
+            "halloween": "Revenant"
+        }
     },
     "GB91_Super_Conqueror": {
-        "GB91_Super_Conqueror_3Dst": "Sentry"
+        "name": "Super Conqueror",
+        "styles": {
+            "GB91_Super_Conqueror_3Dst": "Sentry"
+        }
     },
     "GB105_Black_Prince_2019": {
-        "GB105_Black_Prince_2019_3Dst": "Hobart’s Funnies"
+        "name": "A43 BP prototype",
+        "styles": {
+            "GB105_Black_Prince_2019_3Dst": "Hobart\u2019s Funnies"
+        }
     },
     "GB93_Caernarvon_AX": {
-        "RoyalCorps": "Royal Corps"
+        "name": "Caernarvon Action X",
+        "styles": {
+            "RoyalCorps": "Royal Corps"
+        }
     }
 }

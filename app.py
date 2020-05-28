@@ -8,6 +8,7 @@ from io import BytesIO
 from typing import List, Tuple
 
 from flask import Flask, render_template, request, send_file
+from whitenoise import WhiteNoise
 
 BASE_DIR = os.path.dirname(__file__)
 
@@ -21,9 +22,26 @@ class TankStylesApp(Flask):
         'HULL': 'Hull'
     }
 
+    nations = {
+        'ussr': 'USSR',
+        'usa': 'USA',
+        'uk': 'UK',
+        'germany': 'Germany',
+        'france': 'France',
+        'czech': 'Czechoslovakia',
+        'sweden': 'Sweden',
+        'italy': 'Italy',
+        'poland': 'Poland'
+    }
+
     def __init__(self, *args, **kwargs):
         self.vehicles = defaultdict(lambda: {'script_paths': []})
         self.load_vehicle_scripts()
+        for name in self.vehicles.keys():
+            try:
+                os.mkdir(f'static/{name}')
+            except FileExistsError:
+                pass
         super().__init__(*args, **kwargs)
 
     def load_vehicle_scripts(self):
@@ -47,7 +65,7 @@ class TankStylesApp(Flask):
                         continue
 
                     for style in list(model_styles):
-                        styles_set.add((style.tag, display_names[name].get(style.tag, style.tag)))
+                        styles_set.add((style.tag, display_names.get(name, {"styles": {}})["styles"].get(style.tag, style.tag)))
 
                 if not styles_set:
                     os.remove(os.path.join(root_dir, file_name))
@@ -67,11 +85,11 @@ class TankStylesApp(Flask):
                 self.vehicles[name].update({
                     'name': name,
                     'xml': xml,
-                    'nation': split_path[-1],
                     'styles': list(styles_set),
-                    'display_name': ' '.join(name.replace('_', ' ').split()[1:]),
+                    'display_name': display_names[name]["name"],
                     'paint_areas': list(paint),
-                    'camo_areas': list(camo)
+                    'camo_areas': list(camo),
+                    'nation': self.nations[os.path.basename(root_dir)]
                 })
 
     def get_styled_xml(self, name, style_name, camos, paints):
@@ -112,6 +130,11 @@ class TankStylesApp(Flask):
 
 
 app = TankStylesApp(__name__)
+app.wsgi_app = WhiteNoise(
+    app.wsgi_app,
+    root=os.path.join(os.path.dirname(__file__), "static"),
+    max_age=31536000 if not app.config["DEBUG"] else 0
+)
 
 
 def create_zip_file(files: List[Tuple[List[str], str]]):
@@ -125,12 +148,20 @@ def create_zip_file(files: List[Tuple[List[str], str]]):
     return send_file(memory_file, attachment_filename='styles.wotmod', as_attachment=True)
 
 
+def group_by_attribute(items, accessor):
+    attr_groups = defaultdict(list)
+    for item in items:
+        attr_groups[accessor(item)].append(item)
+
+    return attr_groups
+
+
 def get_styled_files(form_data):
-    included_vehicle_names = [key[len('include_'):] for key, value in form_data.items() if value == 'on']
+    included_vehicle_names = [key for key, value in form_data.items() if key in app.vehicles and value != ""]
     return [
         app.get_styled_xml(
             vehicle_name,
-            form_data.get('style_' + vehicle_name),
+            form_data.get(vehicle_name),
             form_data.getlist('camo_' + vehicle_name) or [],
             form_data.getlist('paint_' + vehicle_name) or []
         )
@@ -146,7 +177,8 @@ def styles():
             return create_zip_file(files)
 
     sorted_vehicles = sorted(app.vehicles.values(), key=lambda vehicle: (vehicle['nation'], vehicle['name']))
-    return render_template('styles.html', vehicles=sorted_vehicles)
+    by_nation = group_by_attribute(sorted_vehicles, lambda vehicle: vehicle['nation'])
+    return render_template('styles.html', vehicle_groups=by_nation)
 
 
 if __name__ == "__main__":
