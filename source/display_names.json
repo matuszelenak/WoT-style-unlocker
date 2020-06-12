@@ -313,5 +313,47 @@
         "styles": {
             "RoyalCorps": "Royal Corps"
         }
+    },
+    "S11_Strv_103B": {
+        "name": "STRV 103B",
+        "styles": {
+            "S11_Strv_103B_3Dst": "Helheim"
+        }
+    },
+    "F108_Panhard_EBR_105": {
+        "name": "Panhard EBR 105",
+        "styles": {
+            "tramontana": "Tramontana"
+        }
+    },
+    "A120_M48A5": {
+        "name": "M48A5 Patton",
+        "styles": {
+            "battlepass2020": "Pipeline"
+        }
+    },
+    "Cz04_T50_51": {
+        "name": "TVP T50/51",
+        "styles": {
+            "battlepass2020": "Storm"
+        }
+    },
+    "GB23_Centurion": {
+        "name": "Centurion Mk. 1",
+        "styles": {
+            "Maple_Leaf": "Maple Leaf"
+        }
+    },
+    "GB98_T95_FV4201_Chieftain": {
+        "name": "T95/FV4201",
+        "styles": {
+            "GM2020": "Crown Guard"
+        }
+    },
+    "R07_T-34-85": {
+        "name": "T-34-85",
+        "styles": {
+            "Victory_day": "Victory Day"
+        }
     }
 }
