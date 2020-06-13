@@ -43,20 +43,24 @@
 
     <form method="post">
         {% for nation, vehicles in vehicle_groups.items() %}
-            <h2>{{ nation }}</h2>
+            <div>
+                <img src="{{ nation }}.png" height="96px">
+                <h1 style="display: inline">{{ nation }}</h1>
+            </div>
             <table class="table table-striped table-responsive table-dark">
                 <thead>
                 <tr>
+                    <td></td>
                     <td>Vehicle</td>
                     <td>Style</td>
-                    <td></td>
+                    <td>Preview</td>
                     <td data-toggle="tooltip" data-placement="botton"
                         title="Select the areas where custom camouflages will be shown (if left unselected, the camouflage will still be active, but not shown on the model. Note that in some cases, the style texture overlays the camouflage and so it might not be visible either way">
-                        Displayed camouflage
+                        Displayed camouflage &#9432;
                     </td>
                     <td data-toggle="tooltip" data-placement="botton"
                         title="Select the areas where custom paint will be shown (if left unselected, the paint will still be active, but not shown on the model. Note that in some cases, the style texture overlays the paint and so it might not be visible either way">
-                        Displayed paint
+                        Displayed paint &#9432;
                     </td>
                 </tr>
                 </thead>
@@ -66,10 +70,14 @@
                 {% for vehicle in vehicles %}
                     <tr>
                         <td>
+                            <img src="{{ vehicle.class }}.png" height="30">
+                            {{ vehicle.tier_latin }}
+                        </td>
+                        <td>
                             <h4>{{ vehicle.display_name }}</h4>
                         </td>
                         <td>
-                            <select id="{{ vehicle.name }}_style" name="{{ vehicle.name }}"
+                            <select id="{{ vehicle.name }}_style" name="{{ vehicle.name }}" class="{{ nation }}"
                                     onchange="onStyleSelect('{{ vehicle.name }}')">
                                 <option value="">No style</option>
                                 {% for style, display_name in vehicle.styles %}

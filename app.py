@@ -34,6 +34,16 @@ class TankStylesApp(Flask):
         'poland': 'Poland'
     }
 
+    tiers = {
+        4: 'IV',
+        5: 'V',
+        6: 'VI',
+        7: 'VII',
+        8: 'VIII',
+        9: 'IX',
+        10: 'X'
+    }
+
     def __init__(self, *args, **kwargs):
         self.vehicles = defaultdict(lambda: {'script_paths': []})
         self.load_vehicle_scripts()
@@ -84,6 +94,9 @@ class TankStylesApp(Flask):
                 self.vehicles[name]['script_paths'].append(os.path.join(*split_path[-5:], file_name))
                 self.vehicles[name].update({
                     'name': name,
+                    'tier': display_names[name]['tier'],
+                    'tier_latin': self.tiers[display_names[name]['tier']],
+                    'class': display_names[name]['class'],
                     'xml': xml,
                     'styles': list(styles_set),
                     'display_name': display_names[name]["name"],
@@ -178,7 +191,11 @@ def styles():
 
     sorted_vehicles = sorted(app.vehicles.values(), key=lambda vehicle: (vehicle['nation'], vehicle['name']))
     by_nation = group_by_attribute(sorted_vehicles, lambda vehicle: vehicle['nation'])
-    return render_template('styles.html', vehicle_groups=by_nation)
+    in_nation_sorted = {
+        nation: sorted(vehicles, key=lambda vehicle: (vehicle['class'], -vehicle['tier'], vehicle['name']))
+        for nation, vehicles in by_nation.items()
+    }
+    return render_template('styles.html', vehicle_groups=in_nation_sorted)
 
 
 if __name__ == "__main__":

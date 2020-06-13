@@ -1,6 +1,8 @@
 {
     "R19_IS-3": {
         "name": "IS-3",
+        "tier": 8,
+        "class": "HT",
         "styles": {
             "Defender_Day": "Pike",
             "R19_IS-3_3Dst": "Montu"
@@ -8,36 +10,48 @@
     },
     "R97_Object_140": {
         "name": "Object 140",
+        "tier": 10,
+        "class": "MT",
         "styles": {
             "R97_Object_140_3Dst": "Sekhmet"
         }
     },
     "R160_T_50_2": {
         "name": "T-50-2",
+        "class": "LT",
+        "tier": 6,
         "styles": {
             "SD": "Immortal classic"
         }
     },
     "R40_T-54": {
         "name": "T-54",
+        "class": "MT",
+        "tier": 9,
         "styles": {
             "halloween": "Revenant"
         }
     },
     "R148_Object_430_U": {
         "name": "Object 430U",
+        "class": "MT",
+        "tier": 10,
         "styles": {
             "R148_Object_430_U_3Dst": "Kelevra"
         }
     },
     "R77_KV2": {
         "name": "KV-2",
+        "class": "HT",
+        "tier": 6,
         "styles": {
             "R77_KV2_Postap_3Dst": "Crimson Legion"
         }
     },
     "R159_SU_130PM": {
         "name": "SU-130PM",
+        "class": "TD",
+        "tier": 8,
         "styles": {
             "SnowLeopard": "Snow Leopard",
             "R159_SU_130PM_3Dst_10_additional_FULL3D": "Altai Fox"
@@ -45,30 +59,40 @@
     },
     "R152_KV2_W": {
         "name": "KV-2 (R)",
+        "class": "HT",
+        "tier": 6,
         "styles": {
             "WH": "Ragnarok"
         }
     },
     "R52_Object_261": {
         "name": "Object 261",
+        "class": "SPG",
+        "tier": 10,
         "styles": {
             "R52_Object_261_3Dst": "The Thin Case"
         }
     },
     "R45_IS-7": {
         "name": "IS-7",
+        "class": "HT",
+        "tier": 10,
         "styles": {
             "NYst": "Granite"
         }
     },
     "R127_T44_100_P": {
         "name": "T-44-100 (R)",
+        "class": "MT",
+        "tier": 8,
         "styles": {
             "FULL3D": "Rostelecom"
         }
     },
     "R95_Object_907": {
         "name": "Object 907",
+        "class": "MT",
+        "tier": 10,
         "styles": {
             "Burnout": "Burnout",
             "R95_Object_907_stock_3Dst": "Graphite"
@@ -76,282 +100,376 @@
     },
     "R155_Object_277": {
         "name": "Object 277",
+        "class": "HT",
+        "tier": 10,
         "styles": {
             "R155_Object_277_3Dst": "Fluffy"
         }
     },
     "R132_VNII_100LT": {
         "name": "T-100LT",
+        "class": "LT",
+        "tier": 10,
         "styles": {
             "R132_VNII_100LT_3Dst": "Gyurza"
         }
     },
     "R154_T_34E_1943": {
         "name": "T-34 shielded",
+        "class": "MT",
+        "tier": 5,
         "styles": {
             "KurskBattle": "Kursk Battle"
         }
     },
     "Cz13_T_27": {
         "name": "Škoda T 27",
+        "class": "MT",
+        "tier": 8,
         "styles": {
             "T_27_3Dst": "J\u00e1n \u017di\u017eka"
         }
     },
     "It08_Progetto_M40_mod_65": {
         "name": "Progetto M40 mod. 65",
+        "class": "MT",
+        "tier": 10,
         "styles": {
             "It08_Progetto_M40_mod_65_3Dst": "Aquilifer"
         }
     },
     "It13_Progetto_M35_mod_46": {
         "name": "Progetto M35 mod. 46",
+        "class": "MT",
+        "tier": 8,
         "styles": {
             "FULL3D": "Safari Corazzato"
         }
     },
     "S26_Lansen_C": {
         "name": "Lansen C",
+        "class": "MT",
+        "tier": 8,
         "styles": {
             "WolvesOfOdin": "Wolves of Odin"
         }
     },
     "S16_Kranvagn": {
         "name": "Kranvagn",
+        "class": "HT",
+        "tier": 10,
         "styles": {
             "S16_Kranvagn_3Dst_10_additional_FULL3D": "Hj\u00e4lpkran"
         }
     },
     "S29_UDES_14_5": {
         "name": "UDES 14 Alt 5",
+        "class": "MT",
+        "tier": 8,
         "styles": {
             "UDES_14_5_3Dst": "Ski Patrol"
         }
     },
     "A66_M103": {
         "name": "M103",
+        "class": "HT",
+        "tier": 9,
         "styles": {
             "Helloween_3Dst": "Revenant"
         }
     },
     "A83_T110E4": {
         "name": "T110E4",
+        "class": "TD",
+        "tier": 10,
         "styles": {
             "NY_3Dst": "Major Ram"
         }
     },
     "A126_PzVI_Tiger_II_capt": {
         "name": "King Tiger (Captured)",
+        "class": "HT",
+        "tier": 7,
         "styles": {
             "KingTiger": "King Tiger"
         }
     },
     "A67_T57_58": {
         "name": "T57 Heavy",
+        "class": "HT",
+        "tier": 10,
         "styles": {
             "NYst": "Hellhound"
         }
     },
     "A123_T78": {
         "name": "T78",
+        "class": "TD",
+        "tier": 6,
         "styles": {
             "T78_ID": "Stars and Stripes"
         }
     },
     "A124_T54E2": {
         "name": "M54 Renegade",
+        "class": "HT",
+        "tier": 8,
         "styles": {
             "A124_T54E2_Renegade_3Dst": "Dead or alive"
         }
     },
     "A100_T49": {
         "name": "T49",
+        "class": "LT",
+        "tier": 9,
         "styles": {
             "halloween": "Revenant"
         }
     },
     "A127_TL_1_LPC": {
         "name": "TL-1 LPC",
+        "class": "MT",
+        "tier": 8,
         "styles": {
             "offspring": "Pretty fly"
         }
     },
     "F05_BDR_G1B": {
         "name": "BDR G1 B",
+        "class": "HT",
+        "tier": 5,
         "styles": {
             "WH": "Mordian"
         }
     },
     "F10_AMX_50B": {
         "name": "AMX 50B",
+        "class": "HT",
+        "tier": 10,
         "styles": {
             "FULL3D": "Javan Rhino"
         }
     },
     "F112_M10_RBFM": {
         "name": "M10 RBFM",
+        "class": "TD",
+        "tier": 5,
         "styles": {
             "Siroco": "Siroco"
         }
     },
     "F18_Bat_Chatillon25t": {
         "name": "Bat.-Châtillon 25 t",
+        "class": "MT",
+        "tier": 10,
         "styles": {
             "NYst": "Marengo"
         }
     },
     "F88_AMX_13_105": {
         "name": "AMX 13 105",
+        "class": "LT",
+        "tier": 10,
         "styles": {
             "F88_AMX_13_105_3Dst": "Viper Noir"
         }
     },
     "F17_AMX_13_90": {
         "name": "AMX 13 90",
+        "class": "LT",
+        "tier": 9,
         "styles": {
             "Halloween_3Dst": "Revenant"
         }
     },
     "F116_Bat_Chatillon_Bourrasque": {
         "name": "Bat.-Châtillon Bourrasque",
+        "class": "MT",
+        "tier": 8,
         "styles": {
             "F116_Bat_Chatillon_Bourrasque_3Dst": "1998 ZZ 10"
         }
     },
     "G73_E50_Ausf_M": {
         "name": "E50 Ausf. M",
+        "class": "MT",
+        "tier": 10,
         "styles": {
             "Halloween_3Dst": "Specter"
         }
     },
     "G51_Lowe": {
         "name": "Löwe",
+        "class": "HT",
+        "tier": 8,
         "styles": {
             "Valentine_Day": "Anhalt Lion"
         }
     },
     "G143_E75_TS": {
         "name": "E75 TS",
+        "class": "HT",
+        "tier": 8,
         "styles": {
             "TS_3Dst": "Becken Kampfgruppa"
         }
     },
     "G72_JagdPz_E100": {
         "name": "Jagdpanzer E 100",
+        "class": "TD",
+        "tier": 10,
         "styles": {
             "G72_JagdPz_E100_3Dst": "Panzerschiff"
         }
     },
     "G121_Grille_15_L63": {
         "name": "Grille 15",
+        "class": "TD",
+        "tier": 10,
         "styles": {
             "NYst": "Igelschn\u00e4uzchen"
         }
     },
     "G56_E-100": {
         "name": "E 100",
+        "class": "HT",
+        "tier": 10,
         "styles": {
             "G56_E-100_3Dst": "Klarer Himmel"
         }
     },
     "G54_E-50": {
         "name": "E 50",
+        "class": "MT",
+        "tier": 9,
         "styles": {
             "Halloween_3Dst": "Specter"
         }
     },
     "G64_Panther_II": {
         "name": "Panther II",
+        "class": "MT",
+        "tier": 8,
         "styles": {
             "Halloween_3Dst": "Specter"
         }
     },
     "G112_KanonenJagdPanzer_105": {
         "name": "KanonenJagdPanzer 105",
+        "class": "TD",
+        "tier": 8,
         "styles": {
             "KanonenPanter": "Black Panther"
         }
     },
     "Pl08_50TP_prototyp": {
         "name": "50TP prototyp",
+        "class": "HT",
+        "tier": 8,
         "styles": {
             "WingedHussar": "Winged Hussar"
         }
     },
     "GB70_N_FV4202_105": {
         "name": "FV4202",
+        "class": "MT",
+        "tier": 8,
         "styles": {
             "GB70_FV4202_PatDay_3Dst": "Four-leaf clover"
         }
     },
     "GB83_FV4005": {
         "name": "FV4005",
+        "class": "TD",
+        "tier": 10,
         "styles": {
             "GB83_FV4005_3Dst": "Galahad"
         }
     },
     "GB24_Centurion_Mk3": {
         "name": "Centurion Mk. 7/1",
+        "class": "MT",
+        "tier": 9,
         "styles": {
             "halloween": "Revenant"
         }
     },
     "GB91_Super_Conqueror": {
         "name": "Super Conqueror",
+        "class": "HT",
+        "tier": 10,
         "styles": {
             "GB91_Super_Conqueror_3Dst": "Sentry"
         }
     },
     "GB105_Black_Prince_2019": {
         "name": "A43 BP prototype",
+        "class": "HT",
+        "tier": 6,
         "styles": {
             "GB105_Black_Prince_2019_3Dst": "Hobart\u2019s Funnies"
         }
     },
     "GB93_Caernarvon_AX": {
         "name": "Caernarvon Action X",
+        "class": "HT",
+        "tier": 8,
         "styles": {
             "RoyalCorps": "Royal Corps"
         }
     },
     "S11_Strv_103B": {
         "name": "STRV 103B",
+        "class": "TD",
+        "tier": 10,
         "styles": {
             "S11_Strv_103B_3Dst": "Helheim"
         }
     },
     "F108_Panhard_EBR_105": {
         "name": "Panhard EBR 105",
+        "class": "LT",
+        "tier": 10,
         "styles": {
             "tramontana": "Tramontana"
         }
     },
     "A120_M48A5": {
         "name": "M48A5 Patton",
+        "class": "MT",
+        "tier": 10,
         "styles": {
             "battlepass2020": "Pipeline"
         }
     },
     "Cz04_T50_51": {
         "name": "TVP T50/51",
+        "class": "MT",
+        "tier": 10,
         "styles": {
             "battlepass2020": "Storm"
         }
     },
     "GB23_Centurion": {
         "name": "Centurion Mk. 1",
+        "class": "MT",
+        "tier": 8,
         "styles": {
             "Maple_Leaf": "Maple Leaf"
         }
     },
     "GB98_T95_FV4201_Chieftain": {
         "name": "T95/FV4201",
+        "class": "HT",
+        "tier": 10,
         "styles": {
             "GM2020": "Crown Guard"
         }
     },
     "R07_T-34-85": {
         "name": "T-34-85",
+        "class": "MT",
+        "tier": 6,
         "styles": {
             "Victory_Day": "Victory Day"
         }
