@@ -473,5 +473,13 @@
         "styles": {
             "Victory_Day": "Victory Day"
         }
+    },
+    "A14_T30" : {
+        "name": "T30",
+        "class": "TD",
+        "tier": 9,
+        "styles": {
+            "T30_Countdown": "Countdown"
+        }
     }
 }
