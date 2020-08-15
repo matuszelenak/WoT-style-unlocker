@@ -481,5 +481,13 @@
         "styles": {
             "T30_Countdown": "Countdown"
         }
+    },
+    "G99_RhB_Waffentrager": {
+        "name": "Rhm. Borsig",
+        "class": "TD",
+        "tier": 8,
+        "styles": {
+            "G99_RhB_Waffentrager_3Dst": "Frettchen"
+        }
     }
 }
