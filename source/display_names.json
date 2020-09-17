@@ -489,5 +489,29 @@
         "styles": {
             "G99_RhB_Waffentrager_3Dst": "Frettchen"
         }
+    },
+    "A136_T42": {
+        "name": "T42",
+        "class": "MT",
+        "tier": 8,
+        "styles": {
+            "A136_T42_3Dst": "Big Hunt"
+        }
+    },
+    "A69_T110E5": {
+        "name": "T110E5",
+        "class": "HT",
+        "tier": 10,
+        "styles": {
+            "A69_T110E5_3Dst_BP": "Condor"
+        }
+    },
+    "R90_IS_4M": {
+        "name": "IS-4",
+        "class": "HT",
+        "tier": 10,
+        "styles": {
+            "R90_IS_4M_3Dst_BP": "Triton"
+        }
     }
 }

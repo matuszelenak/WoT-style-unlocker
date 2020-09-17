@@ -75,7 +75,7 @@ class TankStylesApp(Flask):
                         continue
 
                     for style in list(model_styles):
-                        styles_set.add((style.tag, display_names.get(name, {"styles": {}})["styles"].get(style.tag, style.tag)))
+                        styles_set.add((style.tag, display_names[name]["styles"][style.tag]))
 
                 if not styles_set:
                     os.remove(os.path.join(root_dir, file_name))
