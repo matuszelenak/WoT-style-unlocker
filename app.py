@@ -31,7 +31,9 @@ class TankStylesApp(Flask):
         'czech': 'Czechoslovakia',
         'sweden': 'Sweden',
         'italy': 'Italy',
-        'poland': 'Poland'
+        'poland': 'Poland',
+        'japan': 'Japan',
+        'china': 'China'
     }
 
     tiers = {
@@ -84,11 +86,11 @@ class TankStylesApp(Flask):
                 camo, paint = set(), set()
                 for areas in root.iter(tag='customizableVehicleAreas'):
                     camo_areas = areas.find('camouflage')
-                    if camo_areas is not None and camo_areas.text:
+                    if camo_areas is not None and camo_areas.text is not None and camo_areas.text.strip():
                         camo.add(self.customizable_areas[camo_areas.text.strip()])
 
                     paint_areas = areas.find('paint')
-                    if paint_areas is not None and paint_areas.text:
+                    if paint_areas is not None and paint_areas.text is not None:
                         paint.add(self.customizable_areas[paint_areas.text.strip()])
 
                 self.vehicles[name]['script_paths'].append(os.path.join(*split_path[-5:], file_name))

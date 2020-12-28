@@ -99,6 +99,13 @@
     </customization>
     <customizationSlots>
       <slot>
+        <slotType>	sequence	</slotType>
+        <slotId>	18000	</slotId>
+        <position>	0 0 0	</position>
+        <rotation>	0 0 0	</rotation>
+        <attachNode>	HP_light2	</attachNode>
+      </slot>
+      <slot>
         <slotType>	clan	</slotType>
         <slotId>	10000	</slotId>
         <rayStart>	-0.980247 0.693576 2.30679	</rayStart>
@@ -3319,6 +3326,13 @@
       </customization>
       <customizationSlots>
         <slot>
+          <slotType>	sequence	</slotType>
+          <slotId>	38000	</slotId>
+          <position>	0 0 0	</position>
+          <rotation>	0 0 0	</rotation>
+          <attachNode>	HP_light1	</attachNode>
+        </slot>
+        <slot>
           <slotType>	paint	</slotType>
           <slotId>	31000	</slotId>
           <anchorPosition>	0.000000 0.881899 0.000000	</anchorPosition>
@@ -4223,6 +4237,13 @@
         </customizableVehicleAreas>
       </customization>
       <customizationSlots>
+        <slot>
+          <slotType>	sequence	</slotType>
+          <slotId>	38000	</slotId>
+          <position>	0 0 0	</position>
+          <rotation>	0 0 0	</rotation>
+          <attachNode>	HP_light1	</attachNode>
+        </slot>
         <slot>
           <slotType>	paint	</slotType>
           <slotId>	31000	</slotId>
